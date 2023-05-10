@@ -34,9 +34,11 @@ public class App
                 input = con.readLine("Enter a command: ");
                 dos.writeUTF(input);
                 dos.flush();
-
-                String msgReceived = dis.readUTF();
-                System.out.println(msgReceived);
+                
+                if (!input.equals("close")){
+                    String msgReceived = dis.readUTF();
+                    System.out.println(msgReceived);
+                }
 
             }
 
